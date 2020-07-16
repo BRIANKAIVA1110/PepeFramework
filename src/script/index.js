@@ -5,19 +5,22 @@ import PepeForm from './component/PepeForm.js';
 (()=>{
 
     let textFieldNombre = new PepeTextField({
-        Label:'Ingrese Nombre:'
+        label:'Ingrese Nombre',
+        placeholder:'Ingrese nombre'
     });
     let textFieldApellido = new PepeTextField({
-        Label:'Ingrese apellido:'
+        label:'Ingrese apellido',
+        placeholder:'Ingrese apellido'
     });
     let textFieldDNI = new PepeTextField({
-        Label:'Ingrese DNI:'
+        label:'Ingrese DNI',
+        width:250,
     });
 
     let panelPersonas = new PepePanel({
         // DirectionItem:'row',
         itemsChilds:[textFieldNombre,textFieldApellido,textFieldDNI],
-        directionItem:'column'
+        directionItem:'column',
     });
     // let panelPersonas2 = new PepePanel({
     //     // DirectionItem:'row',

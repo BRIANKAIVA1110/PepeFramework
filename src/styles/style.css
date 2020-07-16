@@ -65,12 +65,32 @@ body{
 .pepe-panel{
     background-color: rgb(186, 186, 189);
     overflow: auto;
-    height: 150px;
     display: flex;
     box-shadow: black 0px 1px 3px;
 }
 /**********************************************************/
 /***********************PEPE-TEXTFIELD*********************/
 .pepe-texfield{
-    
+    display: inline-block;
+    width: fit-content;
+    margin: 5px 10px 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;/*borrar tiene que estas por defecto row*/
+}
+.pepe-texfield > label{
+    font-size: 14px;
+    padding-right: 5px;
+    width: 100px;
+    line-height: 15px;
+}
+.pepe-texfield > label::after{
+    content: ':';
+}
+.pepe-texfield > input[type="text"]{
+    border: 1px solid steelblue;
+    outline-style: none;
+    border-radius: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 24px;
 }
