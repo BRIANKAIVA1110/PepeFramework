@@ -67,6 +67,7 @@ body{
     overflow: auto;
     display: flex;
     box-shadow: black 0px 1px 3px;
+    flex-wrap: wrap;
 }
 /**********************************************************/
 /***********************PEPE-TEXTFIELD*********************/

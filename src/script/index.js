@@ -20,7 +20,7 @@ import PepeForm from './component/PepeForm.js';
     let panelPersonas = new PepePanel({
         // DirectionItem:'row',
         itemsChilds:[textFieldNombre,textFieldApellido,textFieldDNI],
-        directionItem:'column',
+        // directionItem:'column',
     });
     // let panelPersonas2 = new PepePanel({
     //     // DirectionItem:'row',
