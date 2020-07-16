@@ -1,5 +1,6 @@
 import PepeTextField from './component/PepeTextField.js';//si no pones .js(extension) putea.
 import PepePanel from './component/PepePanel.js';
+import PepeForm from './component/PepeForm.js';
 
 (()=>{
 
@@ -9,12 +10,26 @@ import PepePanel from './component/PepePanel.js';
     let textFieldApellido = new PepeTextField({
         Label:'Ingrese apellido:'
     });
-
-    let PepePanelMain = new PepePanel({
-        // DirectionItem:'row',
-        ItemChild:[textFieldNombre,textFieldApellido]
+    let textFieldDNI = new PepeTextField({
+        Label:'Ingrese DNI:'
     });
-    addElment(PepePanelMain,'root');
+
+    let panelPersonas = new PepePanel({
+        // DirectionItem:'row',
+        itemsChilds:[textFieldNombre,textFieldApellido,textFieldDNI],
+        directionItem:'column'
+    });
+    // let panelPersonas2 = new PepePanel({
+    //     // DirectionItem:'row',
+    //     itemsChilds:[textFieldNombre,textFieldApellido,textFieldDNI],
+    //     directionItem:'colum'
+    // });
+    let formPersonas = new PepeForm({
+        itemsChilds:[panelPersonas],
+        width:600,
+        heigth:600,
+    });
+    addElment(formPersonas,'root');
 })()
 
 

@@ -1,20 +1,40 @@
+import Util from '../utils/Utils.js';
+
 class PepePanel extends HTMLDivElement{
-    constructor({ItemChild,DirectionItem}){
+    #genId = new Util();
+    constructor({width,heigth, itemsChilds,directionItem}){
         super();
-        this.ItemChild=ItemChild;
-        this.DirectionItem =DirectionItem || 'column';
-        this.style = `background:grey;display: flex; flex-direction: ${this.DirectionItem};`;
+        this.id = this.#genId.getRandomId();
+        this.width= width;
+        this.heigth = heigth;
+        this.itemsChilds=itemsChilds || [];
+        this.directionItem =directionItem;
+        this.className = "pepe-panel";
+    }
+    connectedCallback(){
         this.init();
     }
     init(){
-        this.renderItenChild();
+        this.setupItenChild();
+        this.setupStyle();
     }
-    renderItenChild(){
-        this.ItemChild.forEach(element => {
+    setupItenChild(){
+        this.itemsChilds.forEach(element => {
             this.appendChild(element);
         });
     }
-    
+    setupComponent(){
+
+    }
+    setupStyle(){
+        let styleResult='';
+        styleResult+= this.width!=null?` width: ${this.width}px;`:' ';
+        styleResult+= this.heigth!=null?` height: ${this.heigth}px;`:' ';
+        styleResult+= this.directionItem!=null?` flex-direction: ${this.directionItem};`:' ';
+        //this.style.width <-- alternativa.
+        //this.style.heigth <-- alternativa.
+        this.style = styleResult;
+    }
 }
 customElements.define("pepe-panel",PepePanel,{extends:'div'})
 

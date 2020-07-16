@@ -7,5 +7,70 @@ body{
 }
 
 .root-content{
+    height: 100%;
+}
 
+/**********************************************************/
+/***********************PEPE-FORM**************************/
+
+.pepe-form-main{
+    
+    background-color: rgb(218, 211, 211);
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    box-shadow: darkslategrey 1px 1px 3px;
+}
+
+.pepe-form-header{
+    height: 35px;
+    background-color: steelblue;
+    color: white;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    display: flex;
+    overflow: hidden;
+    line-height: 14px;
+}
+.pepe-form-header > div:nth-child(1){
+    width: calc(100% - 120px);
+    padding: 5px 5px 0px 5px;
+
+}
+.pepe-form-header > div:nth-child(2){
+    width: 120px;    
+    display: flex;
+    justify-content: flex-end;
+}
+.pepe-form-header > div:nth-child(2) > a{
+    text-decoration: none;
+    color: blanchedalmond;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid;
+    margin: 3px;
+}
+.pepe-form-body{
+    height: calc(100% - 45px);/*header + padding header = 45px*/
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/**********************************************************/
+/***********************PEPE-PANEL**************************/
+
+.pepe-panel{
+    background-color: rgb(186, 186, 189);
+    overflow: auto;
+    height: 150px;
+    display: flex;
+    box-shadow: black 0px 1px 3px;
+}
+/**********************************************************/
+/***********************PEPE-TEXTFIELD*********************/
+.pepe-texfield{
+    
 }
