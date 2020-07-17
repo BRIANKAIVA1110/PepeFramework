@@ -24,9 +24,7 @@ class PepeTextField extends HTMLDivElement {
         this.setupStyle();
     }
     setupItenChild(){
-        // this.itemsChilds.forEach(element => {
-        //     this.appendChild(element);
-        // });
+       
     }
     setupComponent(){
         let textComponentHTML="";

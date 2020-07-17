@@ -57,6 +57,7 @@ body{
     height: calc(100% - 45px);/*header + padding header = 45px*/
     box-sizing: border-box;
     padding: 10px;
+    overflow: auto;
 }
 
 /**********************************************************/
@@ -68,16 +69,18 @@ body{
     display: flex;
     box-shadow: black 0px 1px 3px;
     flex-wrap: wrap;
+    padding: 5px;
+    align-content: flex-start;/*sin esto se reparte espacio height por igual y los hijos se separan*/
 }
 /**********************************************************/
 /***********************PEPE-TEXTFIELD*********************/
 .pepe-texfield{
-    display: inline-block;
     width: fit-content;
-    margin: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: row;/*borrar tiene que estas por defecto row*/
+    height: 50px;
 }
 .pepe-texfield > label{
     font-size: 14px;
@@ -94,4 +97,22 @@ body{
     border-radius: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 24px;
+}
+/**********************************************************/
+/***********************PEPE-NUMBERFIELD*******************/
+
+
+/**********************************************************/
+/***********************PEPE-BUTTON*******************/
+.pepe-button{
+    width: 110px;
+    height: 35px;
+    background-color: steelblue;
+    border: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline-style: none;
+}
+.pepe-button:hover{
+    border: 1px solid rgb(64, 64, 141);
 }
