@@ -2,14 +2,14 @@ import Util from '../utils/Utils.js';
 
 class PepeTextField extends HTMLDivElement {
     #genId = new Util();
-    constructor(props){
+    constructor({label,placeholder,width}){
         super();
         this.id = this.#genId.getRandomId();
         this.labeId = this.#genId.getRandomId();
         this.inputId = this.#genId.getRandomId();
-        this.Label= props.Label;
-        this.type= 'text';
-        
+        this.label= label || '';
+        this.placeholder = placeholder || '';
+        this.width= width;
         this.className="pepe-texfield";
 
 
@@ -24,16 +24,18 @@ class PepeTextField extends HTMLDivElement {
         this.setupStyle();
     }
     setupItenChild(){
-        // this.itemsChilds.forEach(element => {
-        //     this.appendChild(element);
-        // });
+       
     }
     setupComponent(){
         let textComponentHTML="";
-
-        textComponentHTML+=`<label for=${this.inputId}>${this.Label}</label>`;
-        textComponentHTML+=`<input type="text" id=${this.inputId} name=${this.inputId} />`;
-
+        if(this.label!='')
+            textComponentHTML+= `<label for=${this.inputId}>${this.label}</label>`;
+        /*build input */
+        textComponentHTML+= `<input type="text" id=${this.inputId} name=${this.inputId}`;
+        textComponentHTML+= ` ${this.width!=null?`style='width: ${this.width}px'`:''}`;
+        textComponentHTML+= ` ${this.placeholder!=''?` placeholder='${this.placeholder}' `:''}`;
+        textComponentHTML+= ` />`;
+        /*end build input */
         this.innerHTML = textComponentHTML;
     }
     setupStyle(){
